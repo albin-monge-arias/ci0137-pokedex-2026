@@ -9,6 +9,11 @@
   <link rel="icon" type="image/svg+xml" href="assets/pokeball.svg">
   <link rel="icon" type="image/png" href="assets/pokeball.png">
   <!-- favicon.ico vive en la raiz: el navegador lo pide solo, sin <link> -->
+
+  <!-- Hoja de estilos del sitio. Mismo elemento <link> que el favicon;
+       lo que cambia es rel, que dice qué relación tiene el archivo con el documento. -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -33,7 +38,7 @@
   <main>
     <h1>Lista de Pokémon</h1>
 
-    <section id="buscador">
+    <section id="buscador" class="buscador">
       <h2>Buscar y filtrar</h2>
       <p>Buscá por nombre o filtrá por tipo para encontrar un Pokémon más rápido.</p>
 
@@ -67,7 +72,6 @@
             </select>
 
             <button type="submit">Buscar</button>
-            <button type="reset">Limpiar</button>
 
             <p>
               <input type="checkbox" id="solo-capturados" name="solo-capturados" value="si">
@@ -92,8 +96,6 @@
     </section>
 
     <section id="lista-pokemon">
-      <h2>Pokémon disponibles</h2>
-
       <ul class="pokemon-list">
         <li class="pokemon-card">
           <a class="pokemon-card__link" href="detalle-pokemon-bulbasaur.html">
@@ -143,7 +145,6 @@
           </a>
         </li>
 
-        <!-- Única ficha de detalle construida en clase. Las demás quedan de ejercicio. -->
         <li class="pokemon-card">
           <a class="pokemon-card__link" href="detalle-pokemon-squirtle.html">
             <img class="pokemon-card__image" src="assets/squirtle.png" alt="Squirtle" width="96" height="96">
