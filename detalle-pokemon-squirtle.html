@@ -12,6 +12,11 @@
 
     <!-- Hoja de estilos del sitio. Mismo elemento <link> que el favicon;
         lo que cambia es rel, que dice qué relación tiene el archivo con el documento. -->
+    <!-- Tipografías (Google Fonts): ver index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap">
+
     <link rel="stylesheet" href="tokens.css">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -33,7 +38,7 @@
 
         <nav>
           <ul>
-            <li><a href="./" accesskey="p">Pokédex</a></li>
+            <li><a href="./" accesskey="p" aria-current="true">Pokédex</a></li>
             <li><a href="perfil-entrenador.html">Perfil de entrenador</a></li>
             <li><a href="acerca-de.html">Acerca de</a></li>
             <li><a href="configuracion.html">Configuración</a></li>
@@ -83,7 +88,7 @@
         </ul>
       </nav>
 
-      <p><a href="./">&larr; Volver a la lista</a></p>
+      <p class="volver"><a href="./">&larr; Volver a la lista</a></p>
 
       <article id="ficha-pokemon">
         <h1><span>#007</span> Squirtle</h1>
@@ -129,12 +134,12 @@
               <dd>0.5 m</dd>
 
               <dt>Tipo</dt>
-              <dd>Agua</dd>
+              <dd><span class="tipo tipo--agua">Agua</span></dd>
             </dl>
 
             <h3>Cadena evolutiva</h3>
-            <ol>
-              <li>Squirtle</li>
+            <ol class="cadena-evolutiva">
+              <li class="cadena-evolutiva__actual" aria-current="true">Squirtle</li>
               <li>Wartortle</li>
               <li>Blastoise</li>
             </ol>
@@ -172,12 +177,14 @@
 
             <tbody>
               <tr>
-                <td>44</td>
-                <td>48</td>
-                <td>65</td>
-                <td>50</td>
-                <td>64</td>
-                <td>43</td>
+                <!-- style="--valor: N" pasa el número al CSS como variable propia:
+                    la barra de cada celda se dibuja con ese valor (sección 5 del CSS). -->
+                <td style="--valor: 44">44</td>
+                <td style="--valor: 48">48</td>
+                <td style="--valor: 65">65</td>
+                <td style="--valor: 50">50</td>
+                <td style="--valor: 64">64</td>
+                <td style="--valor: 43">43</td>
               </tr>
             </tbody>
 
